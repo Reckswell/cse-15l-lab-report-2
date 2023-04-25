@@ -11,10 +11,18 @@ Methods Called: `public String handleRequest(URI url)`
 
 Arguments:
 * url = `"http://localhost:4444/add-message?s=Test"`
-* parameters = `{s, Test}` (taken from splitting the query after `http://localhost:4444/add-message`)
-* String out = `Test \n` (out = out + `Test \n`)
+* parameters = `{"s", "Test"}` (taken from splitting the query after `http://localhost:4444/add-message`)
+* String out = `Test \n` 
+
+Changes in Values:
+* `out = "" + Test \n`
 
 ### Second time using /add-message
 ![image](https://user-images.githubusercontent.com/73510375/234179128-ffe80f4d-d797-4a2d-b1b2-12e533dc5b17.png)
 
-Methods Called: `
+Methods Called: `public String handleRequest(URI url)`
+
+Arguments:
+* url = `"http://localhost:4444/add-message?s=Maybe%20this%20isn%27t%20a%20test"`
+* parameters = `{"s", "Maybe this isn't a test"}` (taken from splitting the query after `http://localhost:4444/add-message`)
+* String out = `"Test \n Maybe this isn't a test \n"` 
