@@ -29,3 +29,25 @@ Arguments:
 
 Changes in Values:
 * `out = "Test \n" + "Maybe this isn't a test \n"`
+
+## Part 2
+### Method: `static int[] reversed(int[] arr)`
+
+### Failure-inducing input:
+![image](https://user-images.githubusercontent.com/73510375/234180547-d87ab69f-41ac-4864-b200-7113f5a416ae.png)
+
+### Non-Failure-inducing input:
+![image](https://user-images.githubusercontent.com/73510375/234180570-99a3b095-7e0d-4950-bb36-76e4b06b0b7e.png)
+
+### Symptoms:
+![image](https://user-images.githubusercontent.com/73510375/234180609-016be374-deef-4337-a45e-bd1cbd511a5c.png)
+
+### Bug Fix:
+Before: 
+![image](https://user-images.githubusercontent.com/73510375/234180288-d806f832-7015-4e33-9b08-1d0ef9256610.png)
+
+After:
+![image](https://user-images.githubusercontent.com/73510375/234181079-aee3fc25-d252-4318-9dd8-a874c8d1d4bf.png)
+
+Before the fix, the code would just 
+
