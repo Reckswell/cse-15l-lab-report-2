@@ -44,10 +44,13 @@ Changes in Values:
 
 ### Bug Fix:
 Before: 
-![image](https://user-images.githubusercontent.com/73510375/234180288-d806f832-7015-4e33-9b08-1d0ef9256610.png)
+<br> ![image](https://user-images.githubusercontent.com/73510375/234180288-d806f832-7015-4e33-9b08-1d0ef9256610.png)
 
 After:
-![image](https://user-images.githubusercontent.com/73510375/234181079-aee3fc25-d252-4318-9dd8-a874c8d1d4bf.png)
+<br> ![image](https://user-images.githubusercontent.com/73510375/234181079-aee3fc25-d252-4318-9dd8-a874c8d1d4bf.png)
 
-Before the fix, the code would just 
+Before the fix, the code would iterate everything in `newArray` into `arr`, but since `newArray` is empty, it returns an empty array. To fix this, you need to set the current index of `arr` as a temporary variable, and then set the values of newArray iterating backwards (hence the `[arr.length - i - 1]`) as the temporary variable (`arr[i]`). Then, return `newArray`. Essentially, the fix just iterates everything in opposite order given `arr`.
+
+## Part 3
+Something which I didn't know about before the lab in week 2 was the idea of how queries were split inside a url. Before the lab, I had an idea of how queries and urls worked, but didn't know the process of how to differentiate between different queries (ex. how does a code know to add a space, since you can't have a space in a url). After the lab, and this lab report, I found out that a query is split based on it's command (or the action to execute), and the parameters (or a given string). I also learned that spaces are separated with a percentage symbol in the url bar.
 
