@@ -10,8 +10,8 @@
 Methods Called: `public String handleRequest(URI url)`
 
 Arguments:
-* url = `"http://localhost:4444/add-message?s=Test"`
-* parameters = `{"s", "Test"}` (taken from splitting the query after `http://localhost:4444/add-message`)
+* URI url = `"http://localhost:4444/add-message?s=Test"`
+* String[] parameters = `{"s", "Test"}` (taken from splitting the query after `http://localhost:4444/add-message`)
 * String out = `Test \n` 
 
 Changes in Values:
@@ -23,6 +23,9 @@ Changes in Values:
 Methods Called: `public String handleRequest(URI url)`
 
 Arguments:
-* url = `"http://localhost:4444/add-message?s=Maybe%20this%20isn%27t%20a%20test"`
-* parameters = `{"s", "Maybe this isn't a test"}` (taken from splitting the query after `http://localhost:4444/add-message`)
-* String out = `"Test \n Maybe this isn't a test \n"` 
+* URI url = `"http://localhost:4444/add-message?s=Maybe%20this%20isn%27t%20a%20test"`
+* String[] parameters = `{"s", "Maybe this isn't a test"}` (taken from splitting the query after `http://localhost:4444/add-message`)
+* String out = `"Test \n Maybe this isn't a test \n"`
+
+Changes in Values:
+* `out = "Test \n" + "Maybe this isn't a test \n"`
